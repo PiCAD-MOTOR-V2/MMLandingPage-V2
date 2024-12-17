@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sticky Navbar</title>
+  <!-- Bootstrap 5.3 CDN -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/script.js" defer></script>
+</head>
+<body>
+  <!-- Sticky Navbar -->
+  <nav class="navbar navbar-expand-lg bg-white sticky-top border-bottom">
+    <div class="container-fluid">
+      <!-- Brand Logo -->
+      <a class="navbar-brand brand-logo" href="#home">
+        <img src="assets/images/MotorMojoLogo.svg" alt="MotorMojo" class="d-inline-block align-text-top" />
+      </a>
+
+      <!-- Offcanvas Toggler -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Offcanvas Sidebar -->
+      <div
+        class="offcanvas offcanvas-end"
+        tabindex="-1"
+        id="offcanvasNavbar"
+        aria-labelledby="offcanvasNavbarLabel"
+      >
+        <div class="offcanvas-header">
+          <!-- Brand Logo -->
+          <a class="navbar-brand brand-logo" href="#home">
+            <img src="assets/images/MotorMojoLogo.svg" alt="MotorMojo" class="d-inline-block align-text-top" />
+          </a>
+          <button
+            type="button"
+            class="btn-close text-reset"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="offcanvas-body">
+          <!-- Navigation Links -->
+          <ul class="navbar-nav justify-content-start flex-grow-1">
+            <li class="nav-item">
+              <a class="nav-link active" href="#home" id="home-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#overview" id="overview-link">Overview</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="#contact" id="contact-link">Contact Us</a>
+            </li> -->
+          </ul>
+          <!-- Buttons -->
+          <div class="d-flex mt-3 mt-lg-0 auth-buttons">
+            <button onclick="window.location.href='https://accounts.mojomotor.in:8443/realms/keycloack_local/protocol/openid-connect/auth?client_id=keycloak_client_local&redirect_uri=https%3A%2F%2Falpha.mojomotor.in&response_type=code&scope=openid'" class="btn btn-outline-primary btn-signin me-2">Sign In</button>
+            <button onclick="window.location.href='https://accounts.mojomotor.in:8443/realms/keycloack_local/protocol/openid-connect/registrations?client_id=keycloak_client_local&redirect_uri=https%3A%2F%2Falpha.mojomotor.in&response_type=code&scope=openid'" class="btn btn-primary btn-signup">Sign Up</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" >
+    <div class="hero">
+        <!-- <img class="herovectorBackground3" src="assets/images/Vectorbgd3.svg" alt="">
+        <img class="herovectorBackground31" src="assets/images/Vectorbgd3.svg" alt="">
+        <img class="herovectorBackground4" src="assets/images/Vectorbackground4.svg" alt=""> -->
+        <div class="hero-image">
+            <img src="assets/images/laptop1.svg" alt="Laptop with MotorMojo Software">
+        </div>
+        <div class="hero-content">
+            <h1>Your <span class="highlight">Specifications</span>,<br>Our <span class="highlight">Innovation</span></h1>
+            <p>Design Motors for diverse purposes</p>
+            <button onclick="window.location.href='https://accounts.mojomotor.in:8443/realms/keycloack_local/protocol/openid-connect/auth?client_id=keycloak_client_local&redirect_uri=https%3A%2F%2Falpha.mojomotor.in&response_type=code&scope=openid'" class="cta-button">Lets Get Started</button>
+        </div>
+    </div>
+  </section>
+
+  <!-- Overview Section -->
+  <section id="overview" class="overview">
+    <h2 class="ovsection-title">Overview</h2>
+    <div class="overview-content">
+        <!-- <img class="Vectorbackground2" src="assets/images/Vectorbackground2.svg" alt="">
+        <img class="Vectorbackground3" src="assets/images/Vectorbackground2.svg" alt="">
+        <img class="vectorBackground1" src="assets/images/vectorBackground1.svg" alt=""> -->
+        <!-- Container 1: Content first -->
+        <div class="ovcard card-one">
+          <div class="ovcard-title">
+              <h3 class="ovcard-title-sub">Customize Your EV <br> Motor for Any Vehicle</h3>
+              <div class="ovcard-keyword-container">
+                <img src="assets/images/Vector.svg" alt="Your Image">
+                <h3 class="ovcard-keyword">Tailored to Your Specs!</h3>
+              </div>
+          </div>
+          <div class="ovcard-image">
+            <img src="assets/images/overviewImg1.svg" alt="Customize Your EV Motor">
+          </div>
+          <div class="ovcard-para">
+            <p>Design motors for the vehicle by inputting key specifications like battery voltage, wheel radius, and gross weight. Define performance parameters, such as acceleration, max speed, and performance on gradients. Customize the vehicle’s drive cycle interactively by adjusting points on a Speed vs. Time graph for precise control.</p>
+          </div>
+        </div>
+
+        <!-- Container 2: Image first -->
+        <div class="ovcard card-two">
+          <div class="ovcard-title">
+          <h3 class="ovcard-title-sub">Instantly Compute and <br>Visualize the</h3>
+          <div class="ovcard-keyword-container">
+            <img src="assets/images/Vector1.svg" alt="Your Image">
+            <h3 class="ovcard-keyword">Power, Torque, and Performance</h3>
+          </div>
+          
+          </div>
+          <div class="ovcard-image">
+              <img src="assets/images/overviewImg2.svg" alt="Compute and Visualize">
+          </div>
+          <div class="ovcard-para">
+            <p class="move-right-para">MotorMojo computes and displays peak torque, power, and speed, along with the rated operating points, in both numerical and graphical formats. It also analyzes drive cycle performance, providing an enhanced and interactive experience for users.</p>
+          </div>
+        </div>
+
+        <!-- Container 3: Content first -->
+        <div class="ovcard card-three">
+          <div class="ovcard-title">
+              <div class="ovcard-keyword-container">
+                <img src="assets/images/Vector.svg" alt="Your Image">
+                <h3 class="ovcard-keyword">Effortless Motor Design:</h3>
+              </div>
+              <h3 class="ovcard-title-sub">Tailor Specs, Geometry, and Cost for Any Application</h3>
+          </div>
+          <div class="ovcard-image">
+            <img src="assets/images/overviewImg3.svg" alt="Effortless Motor Design">
+          </div>
+          <div class="ovcard-para">
+            <p>Design motors for any application, including EVs, starting from output specifications. Instantly generate motor geometry, winding diagrams, flux density plots, and estimates for cost and weight, all tailored to match the vehicle’s performance needs.</p>
+          </div>
+        </div>
+
+        <!-- Container 4: Image first -->
+        <div class="ovcard card-four">
+          <div class="ovcard-title">
+            <div class="ovcard-keyword-container">
+              <img src="assets/images/Vector1.svg" alt="Your Image">
+              <h3 class="ovcard-keyword">Visualize Motor Performance:</h3>
+            </div>
+            <h3 class="ovcard-title-sub">Torque, Efficiency, and More</h3>
+          </div>
+          <div class="ovcard-image">
+              <img src="assets/images/overviewImg4.svg" alt="Visualize Motor Performance">
+          </div>
+          <div class="ovcard-para">
+            <p class="move-right-para2">MotorMojo offers detailed plots including torque vs. speed, efficiency, winding temperature, motor constraint curves, and maximum torque trajectory.</p>
+          </div>
+        </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="footer-left">
+        <img src="assets/images/MotorMojoLogo.svg" alt="MotorMojo Logo">
+        <p>&copy; 2024 MotorMojo. All rights reserved.</p>
+    </div>
+    <div class="footer-right">
+        <a href="#">Privacy Policy</a> | 
+        <a href="#">Terms of Use</a> | 
+        <a href="#">Sitemap</a>
+        <!-- <p>Contact us at info@motormojo.com</p> -->
+    </div>
+  </footer>
+  <!-- Dummy Sections -->
+  <!-- <section id="home" style="height: 100vh; background-color: #f8f9fa;">
+    <h1 class="text-center">Home Section</h1>
+  </section> -->
+  <!-- <section id="overview" style="height: 100vh; background-color: #e9ecef;">
+    <h1 class="text-center">Overview Section</h1>
+  </section> -->
+  <!-- <section id="contact" style="height: 100vh; background-color: #dee2e6;">
+    <h1 class="text-center">Contact Section</h1>
+  </section> -->
+
+  <!-- Bootstrap JS Bundle -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+  ></script>
+</body>
+</html>

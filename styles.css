@@ -1,0 +1,394 @@
+/* Import Poppins font from Google Fonts */
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');  
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+  }
+
+/* Custom styling for active link */
+  .navbar {
+    padding: 0px 2vw;;
+  }
+  
+  .navbar-nav .nav-item {
+    margin-right: 4vw;
+  }
+
+  .navbar-nav .nav-link {
+    color: #0069bd;
+    font-weight: 500;
+    display: inline-block;
+    padding: 1.2vh 0;
+    transition: color 0.3s ease, background-color 0.3s ease, transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  }
+
+  .navbar-nav .nav-link.active {
+    border-bottom: 3px solid #0069bd;
+    color: #0069bd;
+  }
+
+  .navbar-nav .nav-link:hover {
+    z-index: 1000000;
+    transform: scale(1.1);
+  }
+
+  .brand-logo {
+    margin-right: 3vw;
+    padding: 0px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #0069bd;
+  }
+
+  /* Ensure sections start below the sticky header */
+  section {
+    padding-top: 118px; /* Adjust the value based on your navbar height */
+    margin-top: -118px;
+  }
+
+  .auth-buttons button {
+    margin-left: 1.5vw;
+    padding: 1vh 2vw;
+    border: none;
+    border-radius: 2.5vh;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    border-radius: 4.5vh !important;
+    width: 126px;
+    height: 46px;
+  }
+  
+  .btn-signin {
+    background: transparent;
+    font-weight: 500;
+    color: #0069bd;
+    border: 1.4px solid #0069bd !important;
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+  }
+
+  .btn-signup {
+    background: #0069bd;
+    font-weight: 500;
+    color: white;
+    margin-right: 1vw;
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  */
+  }
+
+  .btn-signup:hover {
+    /* transform: translateY(0.3vh); Simulates the button being pressed down */
+    background-color: #035EA6;
+  }
+
+  .btn-signin:hover {
+    /* transform: translateY(0.3vh); Simulates the button being pressed down */
+    background-color: #EAF6FF;
+    color: #0069bd;
+  }
+
+  .btn-signin:active,
+  .btn-signup:active {
+    /* transform: translateY(0.3vh); Simulates the button being pressed down */
+    background-color: #0069bd; /* Darker shade on click for btn-signup */
+    box-shadow: 0 0.2vh 0.4vh rgba(0, 0, 0, 0.2); /* Reduced shadow on click */
+  }
+
+  .btn-signin:active {
+    background-color: rgba(0, 123, 217, 0.1); /* Slight background color change on click */
+    color: #0069bd; /* Darker text color on click */
+  }
+
+  .offcanvas-header {
+    padding: 0px 20px;
+  }
+
+
+  /* Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 0vh 2vw; */
+    background-image: linear-gradient(to left bottom, #000080, #07379f,#07379f, #2e61b8, #598acc, #8bb2dd, #9dd7f4, #81ecfa, #52eeeb, #2aefd1, #36edab);
+    background-size: cover;
+    color: white;
+    text-align: left;
+    overflow: hidden;
+    height: 100vh;
+    /* margin-top: 160px !important; */
+}
+
+.herovectorBackground3 {
+    position: absolute;
+    /* top: 8%;
+    right: -10%; */
+    width: 50vw;
+    height: 50vh;
+}
+
+.herovectorBackground31 {
+    position: absolute;
+    /* top: 12%;
+    left: -3%; */
+    width: 50vw;
+    height: 50vh;
+    z-index: 1;
+}
+
+.herovectorBackground4 {
+    position: absolute;
+    /* bottom: -6%;
+    right: 22%; */
+    width: 50vw;
+    height: 50vh;
+    opacity: 50%;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 13vw;
+    height: 100vh;
+    padding-bottom: 8vh;
+    padding-top: 10vh;
+    z-index: 5;
+    
+}
+
+.hero-image img{
+    width: 120%;
+    height: 120%;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 50vw;
+    text-align: right;
+    margin-right: 14vw;
+    margin-bottom: 8vh;
+    /* margin-top: 10vh; */
+    z-index: 1;
+}
+
+.hero-content h1 {
+    font-size: clamp(28.44px,2.778vw, 51.56px);
+    line-height: 1.2;
+    margin-top: 10vh;
+}
+
+.hero-content p {
+    margin-top: 1.4vh;
+    font-size: clamp(17.06px,1.667vw, 30.94px);
+}
+
+.highlight {
+    color: #67EE67;
+}
+
+.cta-button {
+    padding: 1.4vh 3vw;
+    background: #009400;
+    color: white;
+    border: none;
+    border-radius: 5vh;
+    cursor: pointer;
+    margin-top: 10vh;
+    font-size: clamp(14.22px,1.389vw, 25.78px);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    /* transition: background-color 0.3s ease;
+    animation: pulse 1.5s infinite; */
+}
+
+.cta-button:hover {
+    background-color: #1BB11B;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 #0069bd80;
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 1vh #0069bd80;
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 #0069bd80;
+    }
+}
+
+
+  
+/* Overview Section */
+.overview {
+    position: relative;
+    z-index: 1;
+    background-size: cover;
+    background-color: #F1FFF1;
+    /* padding:1vh 2vw; */
+    overflow: hidden;
+}
+
+.ovsection-title {
+    font-weight: bold;
+    padding-left: 100px;
+}
+
+.card-two, .card-four {
+    background-color: #FFF;
+}
+
+.overview-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ovcard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 600px;
+    /* width: 90vw; */
+    padding: 0px 100px;
+}
+
+.ovcard-keyword-container img {
+    position: absolute;
+}
+
+.ovcard-para p {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.ovcard-title, .ovcard-para {
+    width: 50%;
+}
+
+.ovcard-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    order: 2;
+}
+
+.ovcard-image img {
+    width: 490px;
+}
+
+.ovcard-title-sub {
+    font-weight: bold;
+}
+
+.ovcard-keyword-container {
+    display: flex;
+}
+
+.ovcard-keyword {
+    color: #FFF;
+    font-weight: bold;
+    padding: 10px 90px;
+    z-index: 10;
+}
+
+
+/* Footer */
+footer {
+    background-image: linear-gradient(to right bottom, #ffffff, #b6dfff, #8ec1ef, #67a4df, #3f86cf, #0069bd);
+    background-size: cover;
+    overflow: visible;
+    color: white;
+    padding: 2vh 4vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Poppins', sans-serif; /* Ensure font is applied here too */
+}
+
+/* Footer Links */
+footer a {
+    color: #ffffff;
+    display: inline-block;
+    text-decoration: none;
+    margin: 0 1vw;
+    transition: color 0.3s ease, background-color 0.3s ease, transform 0.4s cubic-bezier(0.25, 1, 0.5, 1); /* Smooth transition */
+}
+
+footer a:hover {
+    transform: scale(1.1);
+}
+
+footer p {
+    margin-top: 1vh;
+}
+
+/* Footer Right Section */
+.footer-right {
+    color: #ffffff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column;
+        height: auto; /* Adjust height to auto for smaller screens */
+        text-align: center;
+    }
+
+    .ovcard {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+        height: 100%;
+        /* width: 90vw; */
+        padding: 0px 10px;
+    }
+
+    .ovcard-image img {
+        width: 250px;
+    }
+
+    .ovcard-title, .ovcard-para {
+        width: 100%;
+    }
+
+    .ovcard-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        order: 0;
+    }
+
+    .ovcard-para p {
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+    .ovcard-title h3 {
+        font-size: 14px;
+    }
+
+    .ovcard-keyword-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .ovcard-keyword-container img {
+        position: absolute;
+        width: 60%;
+    }
+
+}
