@@ -42,8 +42,8 @@
 
   /* Ensure sections start below the sticky header */
   section {
-    padding-top: 118px; /* Adjust the value based on your navbar height */
-    margin-top: -118px;
+    padding-top: 91px; /* Adjust the value based on your navbar height */
+    margin-top: -91px;
   }
 
   .auth-buttons button {
@@ -234,12 +234,35 @@
 }
 
 .ovsection-title {
-    font-weight: bold;
+    font-weight: 600;
     padding-left: 100px;
+    color: #0069bd;
+    font-size: 32px;
 }
 
-.card-two, .card-four {
+.odd-card .ovcard-keyword-container {
+    margin-left: -60px;
+} 
+
+.odd-card .ovcard-keyword-container h3 {
+    width: 100%;
+} 
+
+.even-card {
     background-color: #FFF;
+}
+
+.even-card .ovcard-keyword-container {
+    margin-left: 90px;
+} 
+
+.even-card .ovcard-keyword-container h3 {
+    width: 100%;
+} 
+
+.even-card .ovcard-title, .even-card .ovcard-para {
+    order: 2;
+    text-align: end;
 }
 
 .overview-content {
@@ -255,9 +278,9 @@
     align-items: center;
     flex-wrap: wrap;
     flex-direction: column;
-    height: 600px;
+    height: 450px;
     /* width: 90vw; */
-    padding: 0px 100px;
+    padding: 0px 50px;
 }
 
 .ovcard-keyword-container img {
@@ -270,14 +293,17 @@
 }
 
 .ovcard-title, .ovcard-para {
-    width: 50%;
+    width: 45%;
 }
 
 .ovcard-image {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50%;
+    width: 45%;
+}
+
+.odd-card .ovcard-image{
     order: 2;
 }
 
@@ -296,7 +322,9 @@
 .ovcard-keyword {
     color: #FFF;
     font-weight: bold;
-    padding: 10px 90px;
+    /* padding: 10px 40px; */
+    padding-left: 60px;
+    padding-top: 10px;
     z-index: 10;
 }
 
@@ -338,18 +366,44 @@ footer p {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+
+    .hero-content h1 {
+        font-size: 16px;
+        font-weight: 700;
+    }
+
+    .hero-content p {
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+    .hero-content button {
+        font-size: 10px;
+        font-weight: 600;
+    }
+
     footer {
         flex-direction: column;
         height: auto; /* Adjust height to auto for smaller screens */
         text-align: center;
+        font-size: 10px;
+    }
+
+    .overview, .overview-content, .ovcard, .ovcard-title, .ovcard-keyword-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .ovsection-title {
+        padding: 0px;
+        font-size: 14px;
     }
 
     .ovcard {
-        display: flex;
-        justify-content: center;
-        align-items: center;
         flex-wrap: wrap;
-        flex-direction: column;
         height: 100%;
         /* width: 90vw; */
         padding: 0px 10px;
@@ -361,6 +415,7 @@ footer p {
 
     .ovcard-title, .ovcard-para {
         width: 100%;
+        padding: 20px;
     }
 
     .ovcard-image {
@@ -368,7 +423,6 @@ footer p {
         justify-content: center;
         align-items: center;
         width: 100%;
-        order: 0;
     }
 
     .ovcard-para p {
@@ -380,15 +434,27 @@ footer p {
         font-size: 14px;
     }
 
-    .ovcard-keyword-container{
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    .odd-card .ovcard-keyword-container, .even-card .ovcard-keyword-container {
+        margin: 0px;
+    }
+
+    .ovcard-keyword {
+        padding: 0px;
+        padding-top: 10px;
     }
 
     .ovcard-keyword-container img {
         position: absolute;
-        width: 60%;
+        width: 70%;
+    }
+
+    .odd-card .ovcard-image{
+        order: 0;
+    }
+
+    .even-card .ovcard-title, .even-card .ovcard-para {
+        order: 0;
+        text-align: center;
     }
 
 }
