@@ -40,6 +40,22 @@
     color: #0069bd;
   }
 
+  .navbar-toggler {
+    border: none;
+    padding: 0;
+  }
+
+  .navbar-toggler:focus {
+    box-shadow: none;
+  }
+
+  .navbar-toggler-icon {
+    background-image: url(assets/images/handburger.svg);
+    /* border: 0px; */
+    /* background-size: 28px; */
+    width: 28px;
+  }
+
   /* Ensure sections start below the sticky header */
   section {
     padding-top: 91px; /* Adjust the value based on your navbar height */
@@ -115,6 +131,7 @@
     background-size: cover;
     height: 100vh;
     padding: 0px 100px;
+    overflow: hidden;
 }
 
 .hero-content {
@@ -147,7 +164,7 @@
 }
 
 .hero-image img {
-    width: 655px;
+    width: 455px;
 }
 
 .hero-button {
@@ -159,8 +176,8 @@
 .hero-button button {
     background-color: #009400;
     color: #FFF;
-    font-size: 24px;
-    font-weight: 600;
+    font-size: 20px;
+    font-weight: 500;
     padding: 12px 32px;
     border: none;
     border-radius: 4.5vh;
@@ -311,8 +328,242 @@ footer p {
     color: #ffffff;
 }
 
-/* Responsive Design */
+
+/* Responsive Design Tablet */
+@media (max-width: 991px) {
+
+    /* Hero Section */
+
+    .hero {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+        background-image: linear-gradient(to left bottom, #000080, #07379f,#07379f, #2e61b8, #598acc, #8bb2dd, #9dd7f4, #81ecfa, #52eeeb, #2aefd1, #36edab);
+        background-size: cover;
+        height: 100vh;
+        padding: 0px 50px;
+    }
+
+    .hero-content {
+        order: 2;
+        text-align: right;
+    }
+
+    .hero-content h1 {
+        color: #FFF;
+        font-size: 26px;
+        font-weight: 700;
+    }
+
+    .hero-content h1 .highlight {
+        color: #67EE67;
+    }
+
+    .hero-content p {
+        color: #FFF;
+        font-size: 15px;
+        font-weight: 500;
+    }
+
+    .hero-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    .hero-image img {
+        width: 500px;
+    }
+
+    .hero-button {
+        order: 2;
+        margin-left: 100px;
+        margin-top: 40px;
+    }
+
+    .hero-button button {
+        background-color: #009400;
+        color: #FFF;
+        font-size: 15px;
+        font-weight: 500;
+        padding: 10px 24px;
+        border: none;
+        border-radius: 4.5vh;
+    }
+
+    .hero-button button:hover {
+        background-color: #1BB11B;
+    }
+    
+    /* Overview Section */
+    .overview {
+        position: relative;
+        z-index: 1;
+        background-size: cover;
+        background-color: #F1FFF1;
+        /* padding:1vh 2vw; */
+        overflow: hidden;
+    }
+
+    .ovsection-title {
+        font-weight: 600;
+        padding-left: 80px;
+        color: #0069bd;
+        font-size: 22px;
+    }
+
+    .odd-card .ovcard-keyword-container {
+        margin-left: -60px;
+    } 
+
+    .odd-card .ovcard-keyword-container h3 {
+        width: 100%;
+    } 
+
+    .even-card {
+        background-color: #FFF;
+    }
+
+    .even-card .ovcard-keyword-container {
+        margin-left: 65px;
+    } 
+
+    .even-card .ovcard-keyword-container h3 {
+        width: 100%;
+        /* text-align: left; */
+    } 
+
+    .even-card .ovcard-title, .even-card .ovcard-para {
+        order: 2;
+        text-align: end;
+    }
+
+    .overview-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .ovcard {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+        height: 350px;
+        /* width: 90vw; */
+        padding: 0px 50px;
+    }
+
+    .ovcard-keyword-container img {
+        position: absolute;
+        width: 35%;
+        /* margin-top: -20px; */
+    }
+
+    .odd-card .ovcard-keyword-container img {
+        width: 30%;
+    }
+
+    .ovcard-title h3 {
+        font-size: 16px;
+    }
+
+    .ovcard-para p {
+        font-size: 15px;
+        font-weight: 500;
+    }
+
+    .ovcard-title, .ovcard-para {
+        width: 45%;
+    }
+
+    .ovcard-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 45%;
+    }
+
+    .odd-card .ovcard-image{
+        order: 2;
+    }
+
+    .ovcard-image img {
+        width: 370px;
+    }
+
+    .ovcard-title-sub {
+        font-weight: bold;
+    }
+
+    .ovcard-keyword-container {
+        display: flex;
+    }
+
+    .ovcard-keyword {
+        color: #FFF;
+        font-weight: bold;
+        /* padding: 10px 40px; */
+        padding-left: 60px;
+        padding-top: 5px;
+        z-index: 10;
+    }
+
+
+    /* Footer */
+    footer {
+        background-image: linear-gradient(to right bottom, #ffffff, #b6dfff, #8ec1ef, #67a4df, #3f86cf, #0069bd);
+        background-size: cover;
+        overflow: visible;
+        color: white;
+        padding: 2vh 4vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: 'Poppins', sans-serif; /* Ensure font is applied here too */
+    }
+
+    /* Footer Links */
+    footer a {
+        color: #ffffff;
+        display: inline-block;
+        text-decoration: none;
+        margin: 0 1vw;
+        transition: color 0.3s ease, background-color 0.3s ease, transform 0.4s cubic-bezier(0.25, 1, 0.5, 1); /* Smooth transition */
+    }
+
+    footer a:hover {
+        transform: scale(1.1);
+    }
+
+    footer p {
+        margin-top: 1vh;
+    }
+
+    /* Footer Right Section */
+    .footer-right {
+        color: #ffffff;
+    }
+
+}
+
+/* Responsive Design Mobile */
 @media (max-width: 768px) {
+
+    .brand-logo img {
+        height: 60px;
+    }
+
+    section {
+        padding-top: 66px; /* Adjust the value based on your navbar height */
+        margin-top: -66px;
+      }
 
     footer {
         flex-direction: column;
@@ -380,8 +631,8 @@ footer p {
         background-color: #009400;
         color: #FFF;
         font-size: 14px;
-        font-weight: 600;
-        padding: 6px 20px;
+        font-weight: 500;
+        padding: 12px 30px;
         border: none;
         border-radius: 3.5vh;
     }
@@ -405,6 +656,10 @@ footer p {
         height: 100%;
         /* width: 90vw; */
         padding: 0px 10px;
+    }
+
+    .ovcard-title-sub {
+        margin: 0;
     }
 
     .ovcard-image img {
@@ -444,6 +699,10 @@ footer p {
     .ovcard-keyword-container img {
         position: absolute;
         width: 70%;
+    }
+
+    .odd-card .ovcard-keyword-container img {
+        width: 60%;
     }
 
     .odd-card .ovcard-image{
