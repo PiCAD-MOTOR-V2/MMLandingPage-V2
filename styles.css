@@ -96,27 +96,15 @@
     /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  */
   }
 
-  .btn-signup:hover {
+  .btn-signup:hover, .btn-signup:active {
     /* transform: translateY(0.3vh); Simulates the button being pressed down */
-    background-color: #035EA6;
+    background-color: #035EA6 !important;
   }
 
-  .btn-signin:hover {
+  .btn-signin:hover, .btn-signin:active {
     /* transform: translateY(0.3vh); Simulates the button being pressed down */
-    background-color: #EAF6FF;
-    color: #0069bd;
-  }
-
-  .btn-signin:active,
-  .btn-signup:active {
-    /* transform: translateY(0.3vh); Simulates the button being pressed down */
-    background-color: #0069bd; /* Darker shade on click for btn-signup */
-    box-shadow: 0 0.2vh 0.4vh rgba(0, 0, 0, 0.2); /* Reduced shadow on click */
-  }
-
-  .btn-signin:active {
-    background-color: rgba(0, 123, 217, 0.1); /* Slight background color change on click */
-    color: #0069bd; /* Darker text color on click */
+    background-color: #EAF6FF !important;
+    color: #0069bd !important;
   }
 
   .offcanvas-header {
