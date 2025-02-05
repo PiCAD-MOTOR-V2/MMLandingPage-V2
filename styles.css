@@ -78,6 +78,7 @@
     border-radius: 4.5vh !important;
     width: 126px;
     height: 46px;
+    font-size: 0.8rem;
   }
   
   .btn-signin {
@@ -211,10 +212,12 @@
 
 .even-card .ovcard-keyword-container {
     margin-left: 90px;
+    justify-content: flex-end;
 } 
 
 .even-card .ovcard-keyword-container h3 {
     width: 100%;
+    margin-right: 30px;
 } 
 
 .even-card .ovcard-title, .even-card .ovcard-para {
