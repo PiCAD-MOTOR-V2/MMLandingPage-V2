@@ -11,7 +11,7 @@ window.addEventListener("scroll", () => {
       current = section.getAttribute("id");
     }
   });
-
+  
   navLinks.forEach((link) => {
     link.classList.remove("active");
     if (link.getAttribute("href").includes(current)) {
@@ -19,6 +19,35 @@ window.addEventListener("scroll", () => {
     }
   });
 });
+
+//Docs download
+function downloadPDF(buttonId, fileName) {
+  const button = document.querySelector(buttonId);
+  
+  // Ensure the cursor is always a pointer
+  button.style.cursor = "pointer";
+
+  button.addEventListener("click", function (event) {
+    event.preventDefault(); // Prevent default navigation
+
+    const link = document.createElement("a");
+    link.href = `/pdf/${fileName}`;
+    // link.download = fileName;
+    link.setAttribute("download", fileName);
+
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  });
+}
+
+// Attach event listeners for each button
+downloadPDF("#overviewpdf", "MotormojoOverview.pdf");
+downloadPDF("#Vehiclepdf", "VehicleGuide.pdf");
+downloadPDF("#Motorpdf", "MotorGuide.pdf");
+downloadPDF("#OtherFeatures", "OtherFeatures.pdf");
+
+
 
 // document.querySelectorAll('.nav-link').forEach(link => {
 //     link.addEventListener('click', () => {
