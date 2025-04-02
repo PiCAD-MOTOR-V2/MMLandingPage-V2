@@ -62,3 +62,69 @@ downloadPDF("#OtherFeatures", "OtherFeatures.pdf");
 //     div[0].remove(); // This completely removes the div from the DOM
 //     });
 // });
+
+// function disableButtonsBasedOnTime() {
+//   const now = new Date();
+//   const hours = now.getHours();
+//   const minutes = now.getMinutes();
+
+//   // Define time range for disabling (10:00 PM to 8:30 AM)
+//   const disableStart = 9 * 60; // 10:00 PM in minutes
+//   const disableEnd = 8 * 60 + 30; // 8:30 AM in minutes
+//   const currentTime = hours * 60 + minutes; // Convert current time to minutes
+
+//   const disableButtons = (currentTime >= disableStart || currentTime < disableEnd);
+
+//   const message = "The online servers will ONLY be available from 8:30 AM to 10:00 PM daily. Please make sure that you login during these hours. Thank you!!";
+
+//   const signinBtn = document.getElementById("signin-btn");
+//   const signupBtn = document.getElementById("signup-btn");
+
+//   signinBtn.disabled = disableButtons;
+//   signupBtn.disabled = disableButtons;
+
+//   if (disableButtons) {
+//       signinBtn.setAttribute("title", message);
+//       signupBtn.setAttribute("title", message);
+//   } else {
+//       signinBtn.removeAttribute("title");
+//       signupBtn.removeAttribute("title");
+//   }
+// }
+
+// // Run on page load
+// disableButtonsBasedOnTime();
+
+function disableButtonsBasedOnTime() {
+  const now = new Date();
+  const hours = now.getHours();
+  const minutes = now.getMinutes();
+
+  // Define time range for disabling (10:00 PM to 8:30 AM)
+  const disableStart = 22 * 60; // 10:00 PM in minutes
+  const disableEnd = 8 * 60 + 30; // 8:30 AM in minutes
+  const currentTime = hours * 60 + minutes; // Convert current time to minutes
+
+  const disableButtons = (currentTime >= disableStart || currentTime < disableEnd);
+  const message = "The online servers will ONLY be available from 8:30 AM to 10:00 PM daily. Please make sure that you login during these hours. Thank you!!";
+
+  // Get buttons
+  const signInBtn = document.getElementById("signin-btn");
+  const signUpBtn = document.getElementById("signup-btn");
+
+  // Apply disable logic
+  if (disableButtons) {
+      signInBtn.disabled = true;
+      signUpBtn.disabled = true;
+      signInBtn.title = message;
+      signUpBtn.title = message;
+  } else {
+      signInBtn.disabled = false;
+      signUpBtn.disabled = false;
+      signInBtn.title = "";
+      signUpBtn.title = "";
+  }
+}
+
+// Run on page load
+disableButtonsBasedOnTime();
